@@ -38,7 +38,7 @@ function playRound(humanChoice, computerChoice) {
         humanScore ++;
     } else if (humanChoice === "Rock" && computerChoice === "Rock") {
         console.log("Tie! Go again!");
-    } else if (humanChoice === "Paper" && computerChoice === "Paper") {
+    } else if (humanChoice === "Paper" && computerChoice === "Rock") {
         console.log("Paper covers Rock! Good Job!");
         humanScore ++;
     } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
@@ -57,18 +57,30 @@ function playRound(humanChoice, computerChoice) {
 }
 
 }
-
-const humanSelection = getComputerChoice();
-const computerSelection = getHumanChoice();
+function clearGame() {
+    humanScore = 0;
+    computerScore = 0;
+}
 
 
 function playGame() {
 
-for(let i=5; i>0; i--) {
 
-playRound(humanSelection, computerSelection);
-console.log("Player: " + humanScore);
-console.log("Computer: " + computerScore);
+
+{for (let i = 5; i > 0; i--){
+
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+ playRound(humanChoice,computerChoice);
+ console.log("Player: " + humanScore);
+ console.log("Computer: " + computerScore);
+}}
+
+if (humanScore > computerScore) {
+    console.log("Congratulations, you WIN!");
+ } else {
+    console.log("Better Luck Next Time, you LOSE!")
+ }
+{ clearGame();
 }
-   
 }
