@@ -28,8 +28,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-        computerChoice = getComputerChoice();
-        humanChoice = getHumanChoice();
+        
     
     if (humanChoice === "Rock" && computerChoice === "Paper") {
         console.log("Oops too bad! Paper covers Rock!");
@@ -56,15 +55,20 @@ function playRound(humanChoice, computerChoice) {
     } else if (humanChoice === "Scissors" && computerChoice === "Scissors") {
         console.log("Tie! Go again!");
 }
-console.log("Player: " + humanScore);
-console.log("Computer: " + computerScore);
-
-    if (humanScore === 5){
-        console.log("Congratulations, YOU WIN!!!")
-    } else if (computerScore === 5) {
-        console.log("That's too bad!! You lose!")
-    }
-
 
 }
 
+const humanSelection = getComputerChoice();
+const computerSelection = getHumanChoice();
+
+
+function playGame() {
+
+for(let i=5; i>0; i--) {
+
+playRound(humanSelection, computerSelection);
+console.log("Player: " + humanScore);
+console.log("Computer: " + computerScore);
+}
+   
+}
