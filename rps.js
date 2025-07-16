@@ -63,7 +63,7 @@ function clearGame() {
 }
 
 
-function playGame() {
+/* function playGame() {
 
 
 
@@ -86,4 +86,4 @@ if (humanScore > computerScore) {
  }
 { clearGame();
 }
-}
+} */
