@@ -25,6 +25,7 @@ h1 {
 h2 {
     font-size: 46px;
     text-align: center;
+    margin: 16px auto;
 }
 
 #paper, #scissors {
@@ -45,13 +46,13 @@ h2 {
 #user {
     display: flex;
     flex-direction: column;
-    text-decoration: underline;
+    
 }
 
 #computer {
     display: flex;
     flex-direction: column;
-    text-decoration: underline;
+    
 }
 
 p {
@@ -65,10 +66,35 @@ p {
 
 h3 {
     font-size: 30px;
+    text-decoration: underline;
 }
 
 #btn-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#scoreTitle {
+    margin-bottom: 0;
+}
+
+#reset-btn {
+    font-size: 24px;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    justify-self: center;
+    cursor: pointer;
+}
+
+#textbox {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#reset-btn:hover {
+    background-color: rgba(146, 208, 219, 0.3);
+
 }
