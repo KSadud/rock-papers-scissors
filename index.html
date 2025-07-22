@@ -7,10 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img src="./images/rock-paper-scissors.png" alt="rock paper scissors">
-    <!-- <img src="./images/rock.png" alt="rock">
-    <img src="./images/paper.png" alt="paper">
-    <img src="./images/scissors.png" alt="scissors"> -->
+    <h1>Rock Paper Scissors</h1>
+    <div id="btn-container">
+   <h2>Choose your Move!</h2>
+     </div>
+    <div id="choice-container">
+        <input type="image" src="./images/rock.png" alt="rock" id="rock" onmouseover="this.src='./images/rockselect.png'" onmouseout="this.src='./images/rock.png'">
+        <input type="image" src="./images/paper.png" alt="paper" id="paper" onmouseover="this.src='./images/paperselect.png'" onmouseout="this.src='./images/paper.png'">
+        <input type="image" src="./images/scissors.png" alt="scissors" id="scissors" onmouseover="this.src='./images/scissorsselect.png'" onmouseout="this.src='./images/scissors.png'">
+    </div>
+    <div id="textbox">
+        <p id="text">fgsfd</p>
+    </div>
+    <div id="scoreboard">
+        <h2>Score</h2>
+        <div id="score">
+            <div id="user">
+                <h3>User</h3>
+                <p id="user-score"></p>
+            </div>
+            <div id="computer">
+                <h3>Computer</h3>
+                <p id="computer-score"></p>
+            </div>
+        </div>
+    </div>
+    
     <script src="./rps.js"></script>
 </body>
 </html>

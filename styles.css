@@ -1,3 +1,74 @@
 * {
-    background-color: aqua;
+    background-color: rgb(209, 212, 212);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#choice-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 200px; */
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+#rock {
+    height: 300px;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 46px;
+    text-align: center;
+}
+
+#paper, #scissors {
+    width: 400px;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+}
+
+#score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#user {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+}
+
+#computer {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+#scoreboard h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

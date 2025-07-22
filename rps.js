@@ -10,7 +10,40 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorsBtn = document.querySelector("#scissors");
+
+rockBtn.addEventListener('click', () => {
+        let computerChoice = getComputerChoice();
+        playRound("Rock", computerChoice);
+        });
+
+paperBtn.addEventListener('click', () => {
+        let computerChoice = getComputerChoice();
+        playRound("Paper", computerChoice);
+        });
+    
+scissorsBtn.addEventListener('click', () => {
+        let computerChoice = getComputerChoice();
+        playRound("Scissors", computerChoice);
+        });
+
+
+ /* function getHumanChoice() {
+     rockBtn.addEventListener('click', () => {
+         return "Rock"
+     });
+     paperBtn.addEventListener('click', () => {
+         return "Paper"
+     });
+     scissorsBtn.addEventListener('click', () => {
+         return "Scissors"
+     });
+ } */
+
+
+/* function getHumanChoice() {
     let turnChoice = prompt("Pick your move!")
     
     if (turnChoice.toLowerCase() === "rock") {
@@ -22,16 +55,23 @@ function getHumanChoice() {
     } else {
         return "Try Again"
     }
-}
+} */
 
 let humanScore = 0;
 let computerScore = 0;
 
+const textBox = document.querySelector("#text");
+const compScore = document.querySelector("#computer-score");
+const userScore = document.querySelector("#user-score");
+
+
+
 function playRound(humanChoice, computerChoice) {
-        
+        userScore.textContent = humanScore;
+        compScore.textContent = computerScore;
     
     if (humanChoice === "Rock" && computerChoice === "Paper") {
-        console.log("Oops too bad! Paper covers Rock!");
+        textBox.textContent = "Oops too bad! Paper covers Rock!";
         computerScore ++;
     } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
         console.log("Rock smashes Scissors! Good Job!");
@@ -60,10 +100,16 @@ function playRound(humanChoice, computerChoice) {
 function clearGame() {
     humanScore = 0;
     computerScore = 0;
+    textBox.textContent = "";
 }
 
 
-/* function playGame() {
+
+
+
+
+
+ /* function playGame() {
 
 
 
